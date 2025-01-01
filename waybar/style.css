@@ -1,0 +1,112 @@
+* {
+  /* `otf-font-awesome` is required to be installed for icons */
+  /*font-family: FontAwesome, "Fira Mono";*/
+  font-family: 'Noto Sans CJK SC', 'FiraCode Nerd Font', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  border-radius: 12px;
+  transition-property: background;
+  transition-duration: 0.2s;
+}
+
+window#waybar {
+  background-color: transparent;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+#workspaces {
+  background: rgba(16, 20, 24, 0.5);
+  transition: none;
+  font-size: 12px;
+}
+
+#workspaces button {
+  padding: 0 8px;
+  background-color: transparent;
+  color: #ffffff;
+}
+
+#workspaces button:hover {
+  background: #6d767e;
+}
+
+#workspaces button.active {
+  background: #fff9bb;
+  color: #000000;
+}
+
+#workspaces button.active:hover {
+  background: #fffcdf;
+}
+
+#workspaces button.urgent {
+  background-color: #eb4d4b;
+}
+
+
+#clock,
+#cpu,
+#memory,
+#network,
+#backlight,
+#wireplumber,
+#tray,
+#window {
+  margin-top: 2px;
+  padding: 0 12px;
+  color: #ffffff;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > * {
+  margin-left: 4px;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > * {
+  margin-right: 4px;
+}
+
+#clock {
+  background-color: #eefff1;
+  color: #000000;
+}
+
+#cpu {
+  background-color: #FE968B;
+  color: #000000;
+}
+
+#memory {
+  background-color: #FFEAAA;
+  color: #000000;
+}
+
+#wireplumber {
+  background-color: #b0f5e5;
+  color: #000000;
+}
+
+#backlight {
+  background-color: #a287cc;
+  color: #000000;
+}
+
+#network {
+  background-color: #87ddff;
+  color: #000000;
+}
+
+#tray {
+  background-color: rgba(16, 20, 24, 0.5);
+}
+
+#window {
+  font-family: 'Fira Mono', 'Noto Sans CJK SC', sans-serif;
+  font-weight: 600;
+  background-color: #cbecff;
+  color: #000000;
+}
