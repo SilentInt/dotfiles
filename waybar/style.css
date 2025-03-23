@@ -3,8 +3,8 @@
   /*font-family: FontAwesome, "Fira Mono";*/
   font-family: 'Noto Sans CJK SC', 'FiraCode Nerd Font', sans-serif;
   font-weight: 600;
-  font-size: 12px;
-  border-radius: 12px;
+  font-size: 16px;
+  border-radius: 16px;
   transition-property: background;
   transition-duration: 0.2s;
 }
@@ -109,4 +109,7 @@ window#waybar.hidden {
   font-weight: 600;
   background-color: #cbecff;
   color: #000000;
+}
+#taskbar button{
+
 }

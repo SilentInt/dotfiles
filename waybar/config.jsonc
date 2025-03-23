@@ -1,11 +1,14 @@
 {
   "layer": "top",
   "position": "top",
-  "height": 26,
+  "height": 38,
   "spacing": 4,
   "modules-left": [
-    "hyprland/workspaces",
-    "hyprland/window"
+    //"hyprland/workspaces",
+    //"hyprland/window"
+    "niri/workspaces",
+    "niri/window",
+    "wlr/taskbar"
   ],
   "modules-center": [],
   "modules-right": [
@@ -17,6 +20,19 @@
     "cpu",
     "clock"
   ],
+  "niri/window": {
+    "format": "{title:.30}",
+  },
+  "wlr/taskbar": {
+    "format": "{icon}{title:.10}",
+    "tooltip-format": "{title} | {app_id}",
+    "icon-size": 28,
+    "on-click": "activate",
+    "on-click-middle": "close",
+    // "rewrite": {
+    //   "(.{20}).+": "$1"
+    // }
+  },
   "hyprland/workspaces": {
     "format": "{icon}",
     "sort-by-number": true,
@@ -67,23 +83,23 @@
     }
   },
   "cpu": {
-    "interval": 1,
+    "interval": 5,
     "format": "  {usage}%",
     "tooltip": true
   },
   "memory": {
-    "interval": 1,
-    "format": "  {used}G",
+    "interval": 10,
+    "format": "  {used:.2}G",
     "tooltip": true
   },
   "network": {
-    "interval": 1,
-    "format-wifi": "󰖩  {essid} ({signalStrength}%)",
+    "interval": 5,
+    "format-wifi": "󰖩  {essid}",
     "format-ethernet": "\uf796 {bandwidthUpBits} {bandwidthDownBits}",
     "format-linked": "  {ifname} (No IP)",
     "format-disconnected": "⚠ Disconnected",
     "tooltip-format": "  {ifname} {ipaddr}/{cidr} via {gwaddr}",
-    "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    "format-alt": "{ifname}: {ipaddr}/{cidr}",
   },
   "wireplumber": {
     "scroll-step": 5,
